@@ -409,3 +409,15 @@ footer {
     height: auto;
     border-radius: 12px;
 }
+.button {
+    background-color: #d62828;
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.button:hover {
+    background-color: #a4161a;
+}
