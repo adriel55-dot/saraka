@@ -1,0 +1,443 @@
+
+/* GENERAL STYLES */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --maroon: #7d1830;
+    --dark-maroon: #4e1020;
+    --gold: #d6a84f;
+    --green: #246b45;
+    --cream: #fff6e5;
+    --white: #ffffff;
+    --text: #342a26;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--cream);
+    color: var(--text);
+    line-height: 1.7;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    color: var(--maroon);
+}
+
+a:hover {
+    color: var(--green);
+}
+
+/* HEADER AND LOGOS */
+header {
+    background-color: var(--white);
+    border-bottom: 4px solid var(--gold);
+}
+
+.branding {
+    max-width: 1200px;
+    margin: auto;
+    padding: 18px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+}
+
+.branding img {
+    width: 85px;
+    height: 85px;
+    object-fit: contain;
+}
+
+.branding .school-logo {
+    width: 75px;
+    height: 75px;
+}
+
+.branding h1 {
+    color: var(--maroon);
+    font-size: clamp(1.3rem, 3vw, 2rem);
+    line-height: 1.3;
+}
+
+.branding p {
+    color: var(--green);
+    font-size: 0.95rem;
+}
+
+/* NAVIGATION */
+nav {
+    background-color: var(--maroon);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 6px 12px;
+}
+
+nav a {
+    color: var(--white);
+    text-decoration: none;
+    padding: 12px 17px;
+    margin: 3px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+nav a:hover,
+nav a.active {
+    background-color: var(--gold);
+    color: var(--dark-maroon);
+}
+
+/* HOME HERO */
+.hero {
+    min-height: 420px;
+    display: flex;
+    align-items: center;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(48, 12, 23, 0.92),
+            rgba(48, 12, 23, 0.42)
+        ),
+        url("images/saraka-cooking.jpg") center/cover no-repeat;
+    color: var(--white);
+    padding: 65px 8%;
+}
+
+.hero-content {
+    max-width: 680px;
+}
+
+.eyebrow {
+    color: var(--gold);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.hero h2 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    line-height: 1.2;
+    margin: 12px 0 20px;
+}
+
+.hero p {
+    margin-bottom: 20px;
+}
+
+/* PAGE BANNERS */
+.page-banner {
+    background-color: var(--green);
+    color: var(--white);
+    text-align: center;
+    padding: 55px 20px;
+    border-bottom: 5px solid var(--gold);
+}
+
+.page-banner h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-bottom: 8px;
+}
+
+/* SECTIONS */
+.section {
+    max-width: 1150px;
+    margin: auto;
+    padding: 55px 25px;
+}
+
+.section h2 {
+    color: var(--maroon);
+    margin-bottom: 18px;
+    font-size: 2rem;
+}
+
+.section h3 {
+    color: var(--green);
+    margin: 12px 0 8px;
+}
+
+.section p {
+    margin-bottom: 14px;
+}
+
+.tinted {
+    max-width: none;
+    background-color: #f4e7ce;
+    padding-left: max(25px, calc((100% - 1100px) / 2));
+    padding-right: max(25px, calc((100% - 1100px) / 2));
+}
+
+.two-column {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    align-items: center;
+    gap: 35px;
+}
+
+.feature-image {
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 4px solid var(--gold);
+}
+
+/* CARDS */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    margin-top: 25px;
+}
+
+.card {
+    background-color: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    padding-bottom: 22px;
+    box-shadow: 0 4px 12px rgba(60, 25, 20, 0.10);
+}
+
+.card img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+}
+
+.card h3,
+.card p,
+.card > a {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.card h3 {
+    margin-top: 16px;
+}
+
+.card > a {
+    font-weight: bold;
+}
+
+.card-icon {
+    min-height: 150px;
+    display: grid;
+    place-items: center;
+    font-size: 4rem;
+    background-color: #f3e4c6;
+}
+
+/* BUTTONS */
+.button {
+    display: inline-block;
+    background-color: var(--gold);
+    color: var(--dark-maroon);
+    padding: 12px 23px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 8px;
+    transition: background-color 0.2s;
+}
+
+.button:hover {
+    background-color: var(--white);
+    color: var(--maroon);
+}
+
+/* TOURISM BANNER */
+.tourism-banner {
+    text-align: center;
+    background-color: var(--maroon);
+    color: var(--white);
+    padding: 50px 20px;
+}
+
+.tourism-banner h2 {
+    color: var(--gold);
+    margin-bottom: 10px;
+}
+
+/* COMPETITION DETAILS */
+.detail-list {
+    padding-left: 22px;
+}
+
+.detail-list li {
+    margin-bottom: 10px;
+}
+
+.steps {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.step {
+    background-color: var(--white);
+    border-radius: 10px;
+    padding: 22px;
+    border-bottom: 4px solid var(--gold);
+}
+
+.step > span {
+    display: inline-grid;
+    place-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--maroon);
+    color: var(--white);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.step h3 {
+    margin-top: 12px;
+}
+
+/* RULES */
+.rules-list {
+    display: grid;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.rule {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+    background-color: var(--white);
+    border-radius: 10px;
+    border-left: 5px solid var(--green);
+}
+
+.rule > span {
+    color: var(--maroon);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.rule h3 {
+    margin-top: 0;
+}
+
+.rule p {
+    margin-bottom: 0;
+}
+
+/* VIDEO */
+.video-container {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border-radius: 12px;
+    background-color: #e6d8bd;
+}
+
+.video-container iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* FOOTER */
+footer {
+    background-color: var(--dark-maroon);
+    color: var(--white);
+    text-align: center;
+    padding: 24px 15px;
+    font-size: 0.9rem;
+}
+
+/* MOBILE RESPONSIVENESS */
+@media (max-width: 800px) {
+    .branding {
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .branding > div {
+        flex: 1 1 200px;
+    }
+
+    .two-column {
+        grid-template-columns: 1fr;
+    }
+
+    .card-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .steps {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 520px) {
+    .branding img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .branding .school-logo {
+        width: 55px;
+        height: 55px;
+    }
+
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav a {
+        padding: 9px;
+    }
+
+    .hero {
+        padding: 45px 22px;
+    }
+
+    .card-grid,
+    .steps {
+        grid-template-columns: 1fr;
+    }
+
+    .feature-image {
+        height: 260px;
+    }
+
+    .section {
+        padding: 35px 20px;
+    }
+}
+.about-video {
+    max-width: 800px;
+    margin: 25px auto 0;
+}
+
+.about-video video {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
